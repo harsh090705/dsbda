@@ -9,3 +9,15 @@ data = {
 df = pd.DataFrame(data)
 
 print(df)
+print(df.head())
+print(df.dtypes)
+summary = df.groupby('Age_Group')['Income'].agg(['mean','median','min','max','std'])
+
+print(summary)
+income_list = df.groupby('Age_Group')['Income'].apply(list)
+
+print(income_list)
+print(df.info())
+print(df)
+
+
